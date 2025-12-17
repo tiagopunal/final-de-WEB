@@ -1,0 +1,79 @@
+{
+  "preguntas": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué es Next.js?",
+      "opciones": [
+        "Una base de datos",
+        "Un framework de React",
+        "Un lenguaje de programación",
+        "Un editor de código"
+      ],
+      "respuestaCorrecta": 1,
+      "explicacion": "Next.js es un framework de React para aplicaciones web con SSR y SSG."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuál es el hook para manejar estado en React?",
+      "opciones": ["useState", "useEffect", "useContext"],
+      "respuestaCorrecta": 0,
+      "explicacion": "useState permite añadir estado local a componentes funcionales."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué archivo se usa para configurar Tailwind en un proyecto?",
+      "opciones": ["tailwind.js", "tailwind.config.js", "tailwind.config.json"],
+      "respuestaCorrecta": 1,
+      "explicacion": "El archivo es tailwind.config.js."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la extensión de archivos JSX con TypeScript?",
+      "opciones": [".js", ".tsx", ".jsx"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Con TypeScript se usan archivos .tsx para JSX."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué indica el status code 404?",
+      "opciones": ["Error interno", "No encontrado", "OK"],
+      "respuestaCorrecta": 1,
+      "explicacion": "404 significa que el recurso no fue encontrado."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es la función de useEffect?",
+      "opciones": ["Gestionar efectos secundarios", "Crear componentes", "Actualizar el DOM manualmente"],
+      "respuestaCorrecta": 0,
+      "explicacion": "useEffect maneja efectos secundarios como fetch o suscripciones."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué método usamos para navegar programáticamente en Next.js App Router?",
+      "opciones": ["useHistory", "useRouter (next/navigation)", "pushState"],
+      "respuestaCorrecta": 1,
+      "explicacion": "En App Router se utiliza useRouter de 'next/navigation'."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué propiedad de CSS se usa para centrar en flexbox?",
+      "opciones": ["align-items", "justify-content", "align-items y justify-content"],
+      "respuestaCorrecta": 2,
+      "explicacion": "Ambas propiedades se usan para centrar horizontal y verticalmente."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Qué permite Tailwind CSS?",
+      "opciones": ["Escribir estilos inline", "Usar utilidades de clases", "Generar imágenes"],
+      "respuestaCorrecta": 1,
+      "explicacion": "Tailwind ofrece clases utilitarias para construir interfaces rápidamente."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Cuál es la forma recomendada de pasar datos entre componentes React?",
+      "opciones": ["Props", "Variables globales", "Modificando el DOM"],
+      "respuestaCorrecta": 0,
+      "explicacion": "Las props son la forma declarativa de pasar datos hijo a componente."
+    }
+  ]
+}

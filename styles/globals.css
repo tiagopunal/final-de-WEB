@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-start: #FFDEE9;
+  --bg-end: #B5FFFC;
+  --card-bg: rgba(255,255,255,0.85);
+  --accent: #7c3aed;
+  --accent-2: #06b6d4;
+  --accent-3: #fb7185;
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply text-white;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+.container {
+  @apply max-w-3xl mx-auto p-6;
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(2,6,23,0.6);
+} 
+
+/* Headings */
+h1, h2 {
+  color: var(--accent);
+}
+h1 { @apply text-4xl font-extrabold; letter-spacing: -0.02em; }
+h2 { @apply text-2xl font-semibold; }
+
+/* Buttons */
+.btn-primary {
+  @apply inline-block px-6 py-2 rounded-full text-white font-semibold shadow;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+}
+.btn-primary:hover { filter: brightness(.95); transform: translateY(-2px); }
+
+.btn-outline {
+  @apply inline-block px-6 py-2 rounded-full border font-medium;
+  border-color: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+  color: #ffffff;
+} 
+
+/* Options */
+.option {
+  @apply w-full text-left px-4 py-2 rounded-lg border transition-all;
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.06);
+}
+.option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(6,182,212,0.08);
+} 
+.option.is-correct {
+  background: linear-gradient(90deg, rgba(34,197,94,0.12), rgba(34,197,94,0.06));
+  border-color: rgba(34,197,94,0.3);
+}
+.option.is-wrong {
+  background: linear-gradient(90deg, rgba(239,68,68,0.12), rgba(239,68,68,0.06));
+  border-color: rgba(239,68,68,0.3);
+}
+
+/* Progress bar */
+.progress {
+  @apply w-full h-3 rounded;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  overflow: hidden;
+} 
+.progress > .bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 60%, var(--accent-3) 100%);
+  transition: width 400ms ease;
+}
+
+/* Small text colors */
+.text-muted { color: rgba(255,255,255,0.75); } 
+
+/* Animaciones y decoraciones */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.hero {
+  @apply relative w-full rounded-xl p-8 mb-8 overflow-hidden;
+  background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));
+  border: 1px solid rgba(124,58,237,0.08);
+  box-shadow: 0 12px 40px rgba(16,24,40,0.06);
+}
+.hero .title { @apply text-4xl font-extrabold text-white drop-shadow-md; }
+.hero .subtitle { @apply mt-2 text-lg text-white/90; }
+
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-semibold text-white;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  box-shadow: 0 6px 20px rgba(124,58,237,0.12);
+}
+
+.floating-circle {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -80px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.28), rgba(255,255,255,0.06));
+  filter: blur(28px);
+  transform: rotate(15deg);
+  opacity: .9;
+}
+
+.card { /* dark translucent card for dark background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card.animate-float { animation: float 5s ease-in-out infinite; } 
+
+/* Options with icon */
+.option { @apply w-full text-left px-4 py-3 rounded-lg border transition-all flex items-center justify-between; }
+.option .text { @apply flex-1 }
+.option .icon { @apply ml-4 w-8 h-8 flex items-center justify-center rounded-full text-sm font-semibold; }
+.option.is-correct .icon { background: rgba(34,197,94,0.15); color: #16a34a; }
+.option.is-wrong .icon { background: rgba(239,68,68,0.12); color: #dc2626; }
+.option:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(6,182,212,0.06); }
+
+/* Chip in top-right of card */
+.chip { @apply inline-block text-sm px-3 py-1 rounded-full font-medium text-white; background: linear-gradient(90deg, rgba(124,58,237,0.95), rgba(6,182,212,0.8)); box-shadow: 0 8px 30px rgba(124,58,237,0.12); }
+
+/* Small polish */
+.btn-primary { transition: transform .12s ease, box-shadow .12s ease; }
+.btn-primary:active { transform: translateY(1px) scale(.995); }
+
+/* ensure progress bar rounding */
+.progress, .progress > .bar { border-radius: 9999px }
+
+/* responsive tweaks */
+@media (max-width: 640px) {
+  .hero { padding: 1.2rem }
+  .hero .title { font-size: 1.6rem }
+}
+
